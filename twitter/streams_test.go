@@ -342,7 +342,7 @@ func TestStreamRetry_ExponentialBackoff(t *testing.T) {
 		reqCount++
 	})
 	stream := &Stream{
-		client:   httpClient,
+		Client:   httpClient,
 		Messages: make(chan interface{}),
 		done:     make(chan struct{}),
 		group:    &sync.WaitGroup{},
@@ -376,7 +376,7 @@ func TestStreamRetry_AggressiveBackoff(t *testing.T) {
 		reqCount++
 	})
 	stream := &Stream{
-		client:   httpClient,
+		Client:   httpClient,
 		Messages: make(chan interface{}),
 		done:     make(chan struct{}),
 		group:    &sync.WaitGroup{},
